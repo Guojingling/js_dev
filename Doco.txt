@@ -1,3 +1,6 @@
 Install Visual Studio Code
 Install Git
 git clone https://github.com/Guojingling/js_dev.git
+git add .
+git commit -m "comments"
+git push

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "JavaScript development environment Pluralsight course by Cory House",
   "scripts": {},
-  "author": "Cory House",
+  "author": "Jing Guo",
   "license": "MIT",
   "dependencies": {
     "whatwg-fetch": "3.0.0"
@@ -11,7 +11,7 @@
   "devDependencies": {
     "babel-cli": "6.26.0",
     "babel-core": "6.26.3",
-    "babel-loader": "8.0.5",
+    "babel-loader": "7.1.0",
     "babel-preset-env": "1.7.0",
     "babel-register": "6.26.0",
     "chai": "4.2.0",
@@ -34,10 +34,10 @@
     "nock": "10.0.6",
     "npm-run-all": "4.1.5",
     "numeral": "2.0.6",
-    "open": "0.0.5",
+    "opn": "5.4.0",
     "rimraf": "2.6.3",
     "style-loader": "0.23.1",
-    "webpack": "4.28.3",
+    "webpack": "3.1.0",
     "webpack-dev-middleware": "3.5.0",
     "webpack-hot-middleware": "2.24.3",
     "webpack-md5-hash": "0.0.6"
