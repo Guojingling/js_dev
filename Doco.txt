@@ -4,3 +4,5 @@ git clone https://github.com/Guojingling/js_dev.git
 git add .
 git commit -m "comments"
 git push
+install extension EditorConfig for VS Code
+Install Node
