@@ -1,10 +1,13 @@
+/*eslint-disable */
+
 import express from 'express';
 import path from 'path';
 import opn from 'opn';
 import webpack from 'webpack';
 import config from '../webpack.config.dev';
+/*eslint-enable */
 
-
+/*eslint-disable no-console */
 const port = 3000;
 const app = express();
 const compiler = webpack(config);
