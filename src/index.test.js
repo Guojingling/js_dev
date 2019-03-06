@@ -24,7 +24,7 @@ describe('index.html', () => {
     //});
     return jsdom.JSDOM.fromFile('./src/index.html', options).then((dom) => {
       const h1 = dom.window.document.getElementsByTagName('h1')[0];
-      expect(h1.innerHTML).to.equal("Hello World?");
+      expect(h1.innerHTML).to.equal("Hello World!");
     });
 
   });
