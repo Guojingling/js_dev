@@ -9,4 +9,6 @@ Install Node
 Localtunnel for share web site
 npm install Localtunnel -g
 lf -- port 3000
+https://ci.appveyor.com/project/Guojingling/js-dev
+https://travis-ci.org/Guojingling/js_dev
 
