@@ -7,7 +7,7 @@
     "start": "npm-run-all --parallel open:src lint:watch test:watch start-mockapi",
     "open:src": "babel-node buildScripts/srcServer.js",
     "lint": "esw webpack.config.* src buildScripts",
-    "lint:watch":"npm run lint -- --watch",
+    "lint:watch": "npm run lint -- --watch",
     "security-check": "npm audit",
     "localtunnel": "lt --port 3000",
     "share": "npm-run-all --parallel open:src localtunnel",
@@ -15,7 +15,12 @@
     "test:watch": "npm run test -- --watch",
     "generate-mock-data": "babel-node buildScripts/generateMockData",
     "prestart-mockapi": "npm run generate-mock-data",
-    "start-mockapi": "json-server --watch src/api/db.json --port 3001"
+    "start-mockapi": "json-server --watch src/api/db.json --port 3001",
+    "clean-dist": "rimraf ./dist && mkdir dist",
+    "prebuild": "npm-run-all clean-dist test lint",
+    "build": "babel-node buildScripts/build.js",
+    "postbuild": "npm-run-all  --parallel start-mockapi buildDistServer",
+    "buildDistServer": "babel-node buildScripts/distServer.js"
   },
   "author": "Jing Guo",
   "license": "MIT",
@@ -33,7 +38,7 @@
     "cheerio": "1.0.0-rc.2",
     "compression": "1.7.3",
     "cross-env": "5.2.0",
-    "css-loader": "2.1.0",
+    "css-loader": "2.1.1",
     "eslint": "^5.14.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.16.0",
@@ -43,7 +48,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "eslint-watch": "4.0.2",
     "express": "^4.16.4",
-    "extract-text-webpack-plugin": "3.0.2",
+    "mini-css-extract-plugin": "0.5.0",
     "html-webpack-plugin": "3.2.0",
     "jsdom": "13.1.0",
     "json-schema-faker": "^0.4.7",
@@ -58,7 +63,6 @@
     "style-loader": "0.23.1",
     "webpack": "4.29.4",
     "webpack-dev-middleware": "3.5.2",
-    "webpack-hot-middleware": "2.24.3",
-    "webpack-md5-hash": "0.0.6"
+    "webpack-hot-middleware": "2.24.3"
   }
 }
